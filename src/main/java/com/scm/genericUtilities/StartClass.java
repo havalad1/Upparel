@@ -14,6 +14,10 @@ import org.testng.annotations.BeforeClass;
 import com.scm.pageObjectModel.LoginPage;
 
 public class StartClass {
+	
+	//baseclass
+	
+	
 	public static final WebDriver sdriver = null;
 	//public static WebDriver sdriver;
 	//public static WebDriverUtility swebDriverUtility;
