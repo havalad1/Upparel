@@ -65,7 +65,7 @@
   
   <profiles>
 	<profile>
-		<id>sanity</id>
+		<id>addretailere2e</id>
 		<build>
 			<plugins>
 				<plugin>
@@ -74,7 +74,7 @@
 					<version>3.0.0-M7</version>
 					<configuration>
 						<suiteXmlFiles>
-							<suiteXmlFile>sanitytestng.xml</suiteXmlFile>
+							<suiteXmlFile>testngaddRetailer.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>

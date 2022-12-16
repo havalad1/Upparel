@@ -2,16 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-15T09:36:56 IST" name="Default suite" finished-at="2022-12-15T09:36:56 IST" duration-ms="115">
+  <suite started-at="2022-12-16T15:58:16 IST" name="Default suite" finished-at="2022-12-16T15:58:24 IST" duration-ms="7893">
     <groups>
     </groups>
-    <test started-at="2022-12-15T09:36:56 IST" name="Default test" finished-at="2022-12-15T09:36:56 IST" duration-ms="115">
-      <class name="practice.MavenDemo">
-        <test-method signature="demo1()[pri:0, instance:practice.MavenDemo@7e5afaa6]" started-at="2022-12-15T09:36:56 IST" name="demo1" finished-at="2022-12-15T09:36:56 IST" duration-ms="20" status="PASS">
+    <test started-at="2022-12-16T15:58:16 IST" name="Default test" finished-at="2022-12-16T15:58:24 IST" duration-ms="7893">
+      <class name="com.scm.addRetailer.AddRetailerTest">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:com.scm.addRetailer.AddRetailerTest@6392827e]" started-at="2022-12-16T15:58:16 IST" name="openApp" finished-at="2022-12-16T15:58:19 IST" duration-ms="3153" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- demo1 -->
-      </class> <!-- practice.MavenDemo -->
+        </test-method> <!-- openApp -->
+        <test-method signature="createNewRetailer()[pri:0, instance:com.scm.addRetailer.AddRetailerTest@6392827e]" started-at="2022-12-16T15:58:19 IST" name="createNewRetailer" finished-at="2022-12-16T15:58:24 IST" duration-ms="4623" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewRetailer -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.scm.addRetailer.AddRetailerTest@6392827e]" started-at="2022-12-16T15:58:24 IST" name="closeApp" finished-at="2022-12-16T15:58:24 IST" duration-ms="69" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- com.scm.addRetailer.AddRetailerTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
