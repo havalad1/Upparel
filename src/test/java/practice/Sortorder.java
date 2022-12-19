@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-import com.scm.genericUtilities.BrowserAndApplicationLaunch;
 import com.scm.genericUtilities.IConstantPath;
 import com.scm.genericUtilities.PropertyFileFetchUtility;
 import com.scm.genericUtilities.WebDriverUtility;
@@ -20,6 +19,8 @@ public class Sortorder {
 
 	void main() throws InterruptedException 
 	{
+
+		WebDriverUtility wdu=new WebDriverUtility();
 		PropertyFileFetchUtility pfu=new PropertyFileFetchUtility();
 		String url=pfu.getDataFromPropertyFile(IConstantPath.PROPERTY_FILE_PATH, "url");
 		String username=pfu.getDataFromPropertyFile(IConstantPath.PROPERTY_FILE_PATH, "username");
@@ -30,16 +31,13 @@ public class Sortorder {
 		Random random=new Random();
 		int ranid=random.nextInt(23);
 		System.out.println(ranid);
-		
-		BrowserAndApplicationLaunch bal=new BrowserAndApplicationLaunch();
-		WebDriver driver = bal.launch(browser, url, timeout);
+		WebDriver driver = wdu.launch(browser, url, timeout);
 		
 		LoginPage loginPage=new LoginPage(driver);
 		loginPage.getUsername(username);
 		loginPage.getPassword(password);
 		
 		WebElement logintype = loginPage.getLoginTypedd();
-		WebDriverUtility wdu=new WebDriverUtility();
 		Select s1 = wdu.SelectMethod(logintype);
 		s1.selectByValue("admin");
 		

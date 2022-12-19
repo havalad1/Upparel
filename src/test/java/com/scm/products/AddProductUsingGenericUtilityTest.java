@@ -12,7 +12,6 @@ import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.support.ui.Select;
 
-import com.scm.genericUtilities.BrowserAndApplicationLaunch;
 import com.scm.genericUtilities.ExcelFetchUtility;
 import com.scm.genericUtilities.IConstantPath;
 import com.scm.genericUtilities.PropertyFileFetchUtility;
@@ -25,9 +24,9 @@ public class AddProductUsingGenericUtilityTest
 {
 	public static void main(String[] args) throws IOException, InterruptedException 
 	{
+		WebDriverUtility wdu=new WebDriverUtility();
 		PropertyFileFetchUtility pfu=new PropertyFileFetchUtility();
 		ExcelFetchUtility efu=new ExcelFetchUtility();
-		BrowserAndApplicationLaunch bal=new BrowserAndApplicationLaunch();
 		
 		
 		Random random=new Random();
@@ -44,7 +43,7 @@ public class AddProductUsingGenericUtilityTest
 		
 		String expectedProname =efu.getFromExcelSheet(IConstantPath.EXCEL_PATH, "product_addproducts", 1, 1)+""+rnum+"";
 		
-		WebDriver driver = bal.launch(browser, url, timeout);
+		WebDriver driver = wdu.launch(browser, url, timeout);
 
 		LoginPage loginPage=new LoginPage(driver);
 		loginPage.getUsername(username);
@@ -69,7 +68,7 @@ public class AddProductUsingGenericUtilityTest
 
 		//unit type dd
 		WebElement unitdd = driver.findElement(By.id("product:unit"));
-		WebDriverUtility wdu=new WebDriverUtility();
+		
 		Select s2 = wdu.SelectMethod(unitdd);
 		s2.selectByValue("2");
 

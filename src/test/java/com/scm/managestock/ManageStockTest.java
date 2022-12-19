@@ -11,7 +11,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import com.scm.genericUtilities.BrowserAndApplicationLaunch;
 import com.scm.genericUtilities.IConstantPath;
 import com.scm.genericUtilities.PropertyFileFetchUtility;
 import com.scm.genericUtilities.WebDriverUtility;
@@ -38,8 +37,7 @@ public class ManageStockTest {
 		//WebDriver driver=new ChromeDriver();
 		//driver.manage().window().maximize();
 		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		BrowserAndApplicationLaunch bal=new BrowserAndApplicationLaunch();
-		WebDriver driver = bal.launch("chrome", url, timeout);
+		WebDriver driver = wdu.launch("chrome", url, timeout);
 		driver.findElement(By.id("login:username")).sendKeys(username);
 		driver.findElement(By.id("login:password")).sendKeys(password);
 		

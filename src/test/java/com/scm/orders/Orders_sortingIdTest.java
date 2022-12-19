@@ -1,25 +1,18 @@
 package com.scm.orders;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import com.scm.genericUtilities.BrowserAndApplicationLaunch;
 import com.scm.genericUtilities.IConstantPath;
 import com.scm.genericUtilities.PropertyFileFetchUtility;
 import com.scm.genericUtilities.WebDriverUtility;
 import com.scm.pageObjectModel.LoginPage;
 import com.scm.pageObjectModel.OrdersPage;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Orders_sortingIdTest 
 {
@@ -31,6 +24,7 @@ public static void main(String[] args) throws InterruptedException, IOException
 	//String url = p.getProperty("url");
 	//String username = p.getProperty("username");
 	//String password = p.getProperty("password");
+	WebDriverUtility wdu=new WebDriverUtility();
 	PropertyFileFetchUtility pfu=new PropertyFileFetchUtility();
 	String url=pfu.getDataFromPropertyFile(IConstantPath.PROPERTY_FILE_PATH, "url");
 	String username=pfu.getDataFromPropertyFile(IConstantPath.PROPERTY_FILE_PATH, "username");
@@ -47,8 +41,7 @@ public static void main(String[] args) throws InterruptedException, IOException
 	//driver.manage().window().maximize();
 	//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	//driver.get(url);
-	BrowserAndApplicationLaunch bal=new BrowserAndApplicationLaunch();
-	WebDriver driver = bal.launch(browser, url, timeout);
+	WebDriver driver = wdu.launch(browser, url, timeout);
 	
 	LoginPage loginPage=new LoginPage(driver);
 	//driver.findElement(By.name("txtUsername")).sendKeys(username);
@@ -60,7 +53,7 @@ public static void main(String[] args) throws InterruptedException, IOException
 	WebElement logintype = loginPage.getLoginTypedd();
 	//Select s=new Select(admin);
 	//s.selectByVisibleText("Admin");
-	WebDriverUtility wdu=new WebDriverUtility();
+	
 	Select s1 = wdu.SelectMethod(logintype);
 	s1.selectByValue("admin");
 	

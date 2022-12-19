@@ -3,6 +3,7 @@ package com.scm.genericUtilities;
 import java.io.File;
 import java.io.IOException;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,6 +11,9 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -17,14 +21,45 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.io.Files;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 /*
  * this class used to define methods which are common for many test scripts
  */
 public class WebDriverUtility 
 {
-	WebDriver driver=BrowserAndApplicationLaunch.driver;
+	WebDriver driver;
 	Actions a;
 	Select s;
+	
+	/**
+	 * this method used to launch browser and application
+	 * @param value
+	 * @param url
+	 * @param to
+	 * @return
+	 */
+	public WebDriver launch(String value, String url, long to) 
+	{
+		if(value.equals("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver=new ChromeDriver();
+		}
+		else if(value.equals("internet explorer")) {
+			WebDriverManager.iedriver().setup();
+			driver=new InternetExplorerDriver();
+		}
+		else {
+			WebDriverManager.firefoxdriver().setup();
+			driver=new FirefoxDriver();
+		}
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(to, TimeUnit.SECONDS);
+		driver.get(url);
+		
+		return driver;
+	}
+	
 	/**
 	 * this method is used to wait untill visibility of element
 	 * @param to

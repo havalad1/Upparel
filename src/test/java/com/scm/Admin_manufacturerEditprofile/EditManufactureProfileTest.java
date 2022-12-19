@@ -1,16 +1,13 @@
 package com.scm.Admin_manufacturerEditprofile;
 
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import com.scm.genericUtilities.BrowserAndApplicationLaunch;
 import com.scm.genericUtilities.ExcelFetchUtility;
 import com.scm.genericUtilities.IConstantPath;
 import com.scm.genericUtilities.PropertyFileFetchUtility;
@@ -43,8 +40,8 @@ public class EditManufactureProfileTest {
 		//WebDriver driver=new ChromeDriver();
 		//driver.manage().window().maximize();
 		//driver.get(p.getProperty("url"));
-		BrowserAndApplicationLaunch bapl=new BrowserAndApplicationLaunch();
-		WebDriver driver = bapl.launch(browser, url, timeout);
+		WebDriverUtility wdu=new WebDriverUtility();
+		WebDriver driver = wdu.launch(browser, url, timeout);
 
 		//driver.findElement(By.id("login:username")).sendKeys(usersname);
 		//driver.findElement(By.id("login:password")).sendKeys(password);
@@ -56,7 +53,6 @@ public class EditManufactureProfileTest {
 		//WebElement sel = driver.findElement(By.id("login:type"));
 		//Select s=new Select(sel);
 		//s.selectByValue("admin");
-		WebDriverUtility wdu=new WebDriverUtility();
 		Select s = wdu.SelectMethod(admin);
 		s.selectByValue("admin");
 

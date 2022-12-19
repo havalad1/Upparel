@@ -8,10 +8,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.scm.genericUtilities.BrowserAndApplicationLaunch;
 import com.scm.genericUtilities.IConstantPath;
 import com.scm.genericUtilities.PropertyFileFetchUtility;
-import com.scm.genericUtilities.StartClass;
 import com.scm.genericUtilities.WebDriverUtility;
 import com.scm.pageObjectModel.LoginPage;
 import com.scm.pageObjectModel.ManageStockPage;
@@ -29,8 +27,7 @@ public class ManageStockUsingGenericUtilityTest {
 		String password = pfu.getDataFromPropertyFile(IConstantPath.PROPERTY_FILE_PATH, "password");
 		long timeout = Long.parseLong(pfu.getDataFromPropertyFile(IConstantPath.PROPERTY_FILE_PATH, "timeout"));
 
-		BrowserAndApplicationLaunch bal = new BrowserAndApplicationLaunch();
-		WebDriver driver = bal.launch("chrome", url, timeout);
+		WebDriver driver = wdu.launch("chrome", url, timeout);
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.getUsername(username);
 		loginPage.getPassword(password);

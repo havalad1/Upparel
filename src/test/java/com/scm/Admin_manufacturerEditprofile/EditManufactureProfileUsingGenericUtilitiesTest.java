@@ -7,11 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import com.scm.genericUtilities.BrowserAndApplicationLaunch;
 import com.scm.genericUtilities.ExcelFetchUtility;
 import com.scm.genericUtilities.IConstantPath;
 import com.scm.genericUtilities.PropertyFileFetchUtility;
-import com.scm.genericUtilities.StartClass;
 import com.scm.genericUtilities.WebDriverUtility;
 import com.scm.pageObjectModel.EditManufacturerProfilePage;
 import com.scm.pageObjectModel.LoginPage;
@@ -20,6 +18,8 @@ public class EditManufactureProfileUsingGenericUtilitiesTest
 {
 	public static void main(String[] args) throws InterruptedException 
 	{
+
+		WebDriverUtility wdu=new WebDriverUtility();
 		ExcelFetchUtility ffeu=new ExcelFetchUtility();
 		//String name1 = ffeu.getFromExcelSheet(IConstantPath.EXCEL_PATH, "editprofile",  1, 1);
 		String email = ffeu.getFromExcelSheet(IConstantPath.EXCEL_PATH, "editprofile", 1, 2);
@@ -35,15 +35,13 @@ public class EditManufactureProfileUsingGenericUtilitiesTest
 		long timeout = Long.parseLong(pffu.getDataFromPropertyFile(IConstantPath.PROPERTY_FILE_PATH, "timeout"));
 		String browser = pffu.getDataFromPropertyFile(IConstantPath.PROPERTY_FILE_PATH, "browser");
 
-		BrowserAndApplicationLaunch bapl=new BrowserAndApplicationLaunch();
-		WebDriver driver = bapl.launch(browser, url, timeout);
+		WebDriver driver = wdu.launch(browser, url, timeout);
 
 		LoginPage loginPage=new LoginPage(driver);
 		loginPage.getUsername(usersname);
 		loginPage.getPassword(password);
 		
 		WebElement admin = loginPage.getLoginTypedd();
-		WebDriverUtility wdu=new WebDriverUtility();
 		Select s = wdu.SelectMethod(admin);
 		s.selectByValue("admin");
 

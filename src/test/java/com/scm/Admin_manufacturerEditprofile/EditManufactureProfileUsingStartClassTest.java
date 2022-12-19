@@ -58,7 +58,6 @@ public class EditManufactureProfileUsingStartClassTest extends StartClass
 
 				//update manufacturer
 				editManufacturerProfilePage.getupdateManufactureButton();
-				Assert.fail();
 				wdu.alertPopUpAccept(driver);
 				flag=true;
 				break;

@@ -16,29 +16,28 @@ public class StartClass {
 	
 	public static final WebDriver sdriver = null;
 	//public static WebDriver;
-//	public static WebDriverUtility swebDriverUtility;
+	public static WebDriverUtility swebDriverUtility;
 	protected WebDriver driver;
 	public WebDriverUtility wdu;
 	protected ExcelFetchUtility ffeu = new ExcelFetchUtility();;
 	protected PropertyFileFetchUtility pffu;
-	protected BrowserAndApplicationLaunch bapl;
 	LoginPage loginPage;
 	protected boolean flag = false;
 
 	@BeforeClass
 	public void openApp() {
 		
-		
+		wdu = new WebDriverUtility();
 		pffu = new PropertyFileFetchUtility();
-		bapl = new BrowserAndApplicationLaunch();
+		//bapl = new BrowserAndApplicationLaunch();
 		String url = pffu.getDataFromPropertyFile(IConstantPath.PROPERTY_FILE_PATH, "url");
 		String usersname = pffu.getDataFromPropertyFile(IConstantPath.PROPERTY_FILE_PATH, "username");
 		String password = pffu.getDataFromPropertyFile(IConstantPath.PROPERTY_FILE_PATH, "password");
 		long timeout = Long.parseLong(pffu.getDataFromPropertyFile(IConstantPath.PROPERTY_FILE_PATH, "timeout"));
 		String browser = pffu.getDataFromPropertyFile(IConstantPath.PROPERTY_FILE_PATH, "browser");
 
-		driver = bapl.launch(browser, url, timeout);
-		wdu = new WebDriverUtility();
+		driver = wdu.launch(browser, url, timeout);
+		
 		ThreadSafe.setWebdriverutility(wdu);
 		//sdriver = driver;
 		loginPage = new LoginPage(driver);
@@ -56,8 +55,6 @@ public class StartClass {
 
 	@AfterClass
 	public void closeApp() {
-		
-		
 		driver.close();
 	}
 }
