@@ -1,25 +1,21 @@
-/**
- * this package contain classes which are used in all most all the test scripts
- */
-
 package com.scm.genericUtilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import com.scm.pageObjectModel.LoginPage;
 
+/**
+ * this package contain classes which are used in all most all the test scripts
+ */
+
 public class StartClass {
 	
-	//baseclass
-	
-	
 	public static final WebDriver sdriver = null;
-	//public static WebDriver sdriver;
+	//public static WebDriver;
 	//public static WebDriverUtility swebDriverUtility;
 	protected WebDriver driver;
 	public WebDriverUtility wdu;
@@ -32,7 +28,7 @@ public class StartClass {
 	@BeforeClass
 	public void openApp() {
 		wdu = new WebDriverUtility();
-		ThreadSafe.setWebdriverutility(wdu);
+		//ThreadSafe.setWebdriverutility(wdu);
 		
 		pffu = new PropertyFileFetchUtility();
 		bapl = new BrowserAndApplicationLaunch();
@@ -59,6 +55,8 @@ public class StartClass {
 
 	@AfterClass
 	public void closeApp() {
+		
+		
 		driver.close();
 	}
 }

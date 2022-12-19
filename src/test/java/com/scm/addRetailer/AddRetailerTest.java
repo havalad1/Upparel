@@ -44,10 +44,10 @@ public class AddRetailerTest extends StartClass {
 		addRetailerPage.retaileremailTextBoxmethod(email);
 		addRetailerPage.retaileraddressTextBoxmethod(address);
 
-		//Thread.sleep(3000);
+		// Thread.sleep(3000);
 		addRetailerPage.retailersubmitbuttonmethod();
 
-		//Thread.sleep(5000);
+		// Thread.sleep(5000);
 		wdu.alertPopUpAccept(driver);
 
 		addRetailerPage.retailersbuttonmethod();
