@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
-import org.apache.commons.io.CopyUtils;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -23,7 +22,7 @@ import com.google.common.io.Files;
  */
 public class WebDriverUtility 
 {
-	WebDriver driver;
+	WebDriver driver=BrowserAndApplicationLaunch.driver;
 	Actions a;
 	Select s;
 	/**
@@ -56,9 +55,8 @@ public class WebDriverUtility
 	/**
 	 * this method used to take screenshot and return path of screenshot
 	 * @param testCaseName
-	 * @return
 	 */
-	public String takescreenshot(String testCaseName)
+	public void takescreenshot(String testCaseName)
 	{
 		String fileName=testCaseName+"_"+new JavaUtility().getDateTime();
 		TakesScreenshot ts=(TakesScreenshot)driver;
@@ -68,7 +66,7 @@ public class WebDriverUtility
 			Files.copy(src, dst);
 		} catch (IOException e) {
 		}
-		return dst.getAbsolutePath();
+		//return dst.getAbsolutePath();
 	}
 	
 	/**
@@ -163,9 +161,9 @@ public class WebDriverUtility
 	/*
 	 * this method used to accept alert popup
 	 */
-	public void alertPopUpAccept(WebDriver driver)
+	public void alertPopUpAccept(WebDriver driver )
 	{
-		this.driver=driver;
+		//this.driver=driver;
 		driver.switchTo().alert().accept();
 	}
 	
@@ -173,8 +171,9 @@ public class WebDriverUtility
 	/**
 	 * this method used to dismiss alert popup
 	 */
-	public void alertPopUpDismiss()
+	public void alertPopUpDismiss(WebDriver driver)
 	{
+		this.driver=driver;
 		driver.switchTo().alert().dismiss();
 	}
 	

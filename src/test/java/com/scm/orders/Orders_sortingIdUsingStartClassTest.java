@@ -11,13 +11,13 @@ import org.testng.annotations.Test;
 
 import com.scm.genericUtilities.StartClass;
 import com.scm.pageObjectModel.OrdersPage;
-@Listeners(com.scm.genericUtilities.ListenerImplementationClass_1.class)
+//@Listeners(com.scm.genericUtilities.ListenerImplementationClass_1.class)
 public class Orders_sortingIdUsingStartClassTest extends StartClass {
 
 	@Test
 	public void orderSort() {
 		Random random = new Random();
-		int ranid = random.nextInt(23);
+		int ranid = random.nextInt(15);
 		System.out.println(ranid);
 
 		// click on orders button
@@ -39,6 +39,5 @@ public class Orders_sortingIdUsingStartClassTest extends StartClass {
 		String actualid = ordersPage.actualidnumber().getText();
 		
 		Assert.assertEquals(actualid, ""+ranid+"");
-		Assert.assertEquals("A", "B");
 	}
 }

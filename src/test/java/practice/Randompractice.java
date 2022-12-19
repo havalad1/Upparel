@@ -1,5 +1,7 @@
 package practice;
 
+import java.util.Random;
+
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class Randompractice 
@@ -8,6 +10,10 @@ public class Randompractice
 		
 		String ranstring = RandomStringUtils.randomAlphabetic(10);
 		System.out.println(ranstring);
+		
+		
+		Random random=new Random();
+		
 	}
 
 }

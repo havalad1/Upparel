@@ -21,7 +21,7 @@ public class  BrowserAndApplicationLaunch
 	
 	//shankar
 	
-	WebDriver driver=null;
+	public static WebDriver driver;
 	
 	/**
 	 * this method used to launch browser and application

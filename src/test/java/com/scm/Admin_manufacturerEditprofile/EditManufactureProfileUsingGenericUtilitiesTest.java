@@ -55,7 +55,7 @@ public class EditManufactureProfileUsingGenericUtilitiesTest
 		editManufacturerProfilePage.getManufacturersbutton();
 		
 		//name
-		String expectedname="dSRhHtsanM";
+		String expectedname="shankar";
 		List<WebElement> nameList = editManufacturerProfilePage.getnameList();
 		boolean flag=false;
 		for(int i=0;i<nameList.size();i++)

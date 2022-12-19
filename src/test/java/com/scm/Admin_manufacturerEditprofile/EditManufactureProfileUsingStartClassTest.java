@@ -5,12 +5,15 @@ import java.util.List;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.scm.genericUtilities.IConstantPath;
+import com.scm.genericUtilities.ListenerImplementationClass_1;
 import com.scm.genericUtilities.StartClass;
+import com.scm.genericUtilities.ThreadSafe;
 import com.scm.pageObjectModel.EditManufacturerProfilePage;
-
+@Listeners(com.scm.genericUtilities.ListenerImplementationClass_1.class)
 public class EditManufactureProfileUsingStartClassTest extends StartClass
 {
 	@Test
@@ -28,7 +31,7 @@ public class EditManufactureProfileUsingStartClassTest extends StartClass
 		editManufacturerProfilePage.getManufacturersbutton();
 
 		//name
-		String expectedname="dSRhHtsanM";
+		String expectedname="shankar";
 		List<WebElement> nameList = editManufacturerProfilePage.getnameList();
 		boolean flag=false;
 		for(int i=0;i<nameList.size();i++)
@@ -55,6 +58,7 @@ public class EditManufactureProfileUsingStartClassTest extends StartClass
 
 				//update manufacturer
 				editManufacturerProfilePage.getupdateManufactureButton();
+				Assert.fail();
 				wdu.alertPopUpAccept(driver);
 				flag=true;
 				break;

@@ -16,7 +16,7 @@ import com.scm.genericUtilities.StartClass;
 import com.scm.genericUtilities.WebDriverUtility;
 import com.scm.pageObjectModel.addProductPage;
 
-@Listeners(com.scm.genericUtilities.ListenerImplementationClass_1.class)
+//@Listeners(com.scm.genericUtilities.ListenerImplementationClass_1.class)
 public class AddProductUsingStartClassTest extends StartClass {
 
 	@Test
@@ -40,7 +40,7 @@ public class AddProductUsingStartClassTest extends StartClass {
 
 		// unit type dd
 		WebElement unitdd = driver.findElement(By.id("product:unit"));
-		WebDriverUtility wdu = new WebDriverUtility();
+	//	WebDriverUtility wdu = new WebDriverUtility();
 		Select s2 = wdu.SelectMethod(unitdd);
 		s2.selectByValue("2");
 
@@ -77,6 +77,5 @@ public class AddProductUsingStartClassTest extends StartClass {
 			}
 		}
 		Assert.assertEquals(flag, true);
-		Assert.fail();
 	}
 }

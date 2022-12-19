@@ -7,6 +7,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.scm.genericUtilities.IConstantPath;
@@ -14,12 +15,12 @@ import com.scm.genericUtilities.StartClass;
 import com.scm.genericUtilities.WebDriverUtility;
 import com.scm.pageObjectModel.AddRetailerPage;
 import com.scm.pageObjectModel.HomePage;
-
+@Listeners(com.scm.genericUtilities.ListenerImplementationClass_1.class)
 public class AddRetailerTest extends StartClass {
 	@Test
 	public void createNewRetailer() throws InterruptedException {
 		Random r = new Random();
-		wdu = new WebDriverUtility();
+		//wdu = new WebDriverUtility();
 		HomePage homePage = new HomePage(driver);
 		AddRetailerPage addRetailerPage = new AddRetailerPage(driver);
 
@@ -37,7 +38,7 @@ public class AddRetailerTest extends StartClass {
 		addRetailerPage.retailerNmaeTextBoxmethod(un);
 		addRetailerPage.retailerpasswordTextBoxmethod(pw);
 		WebElement areacodedd = addRetailerPage.retailerAreaCodedd();
-		wdu = new WebDriverUtility();
+		//wdu = new WebDriverUtility();
 		Select s = wdu.SelectMethod(areacodedd);
 		s.selectByVisibleText(areacodevalue);
 		addRetailerPage.retailerPhoneTextBoxmethod(ph2);
