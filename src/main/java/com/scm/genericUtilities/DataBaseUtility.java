@@ -15,7 +15,9 @@ import com.mysql.cj.jdbc.Driver;
  */
 public class DataBaseUtility 
 {
+
 	//shankar
+// branch 'master' of https://github.com/havalad1/Upparel.git
 	Driver dbdriver;
 	/**
 	 * this method used to read and write data into database
