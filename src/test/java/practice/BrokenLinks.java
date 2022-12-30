@@ -16,11 +16,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrokenLinks {
 	public static void main(String[] args) {
-		WebDriverManager.firefoxdriver().setup();
-		WebDriver driver = new FirefoxDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("https://www.gmail.com");
+		driver.get("http://www.google.com");
 		List<WebElement> allLinks = driver.findElements(By.xpath("//a"));
 		for (int i = 0; i < allLinks.size(); i++) {
 			String url = allLinks.get(i).getAttribute("href");
