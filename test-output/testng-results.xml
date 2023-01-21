@@ -1,73 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-19T17:23:35 IST" name="Suite" finished-at="2022-12-19T17:24:02 IST" duration-ms="26655">
+  <suite started-at="2023-01-19T16:21:06 IST" name="Default suite" finished-at="2023-01-19T16:21:07 IST" duration-ms="1366">
     <groups>
     </groups>
-    <test started-at="2022-12-19T17:23:35 IST" name="Test" finished-at="2022-12-19T17:24:02 IST" duration-ms="26655">
-      <class name="com.scm.managestock.ManageStockUsingGenericUtilityTest">
-        <test-method signature="main()[pri:0, instance:com.scm.managestock.ManageStockUsingGenericUtilityTest@156b88f5]" started-at="2022-12-19T17:23:35 IST" name="main" finished-at="2022-12-19T17:23:40 IST" duration-ms="5216" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- main -->
-      </class> <!-- com.scm.managestock.ManageStockUsingGenericUtilityTest -->
-      <class name="com.scm.Admin_manufacturerEditprofile.EditManufactureProfileUsingStartClassTest">
-        <test-method is-config="true" signature="openApp()[pri:0, instance:com.scm.Admin_manufacturerEditprofile.EditManufactureProfileUsingStartClassTest@194bcebf]" started-at="2022-12-19T17:23:35 IST" name="openApp" finished-at="2022-12-19T17:23:40 IST" duration-ms="4345" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="editmanuprof()[pri:0, instance:com.scm.Admin_manufacturerEditprofile.EditManufactureProfileUsingStartClassTest@194bcebf]" started-at="2022-12-19T17:23:40 IST" name="editmanuprof" finished-at="2022-12-19T17:23:43 IST" duration-ms="3561" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editmanuprof -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.scm.Admin_manufacturerEditprofile.EditManufactureProfileUsingStartClassTest@194bcebf]" started-at="2022-12-19T17:23:43 IST" name="closeApp" finished-at="2022-12-19T17:23:43 IST" duration-ms="69" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-      </class> <!-- com.scm.Admin_manufacturerEditprofile.EditManufactureProfileUsingStartClassTest -->
+    <test started-at="2023-01-19T16:21:06 IST" name="Default test" finished-at="2023-01-19T16:21:07 IST" duration-ms="1366">
       <class name="com.scm.addRetailer.AddRetailerTest">
-        <test-method is-config="true" signature="openApp()[pri:0, instance:com.scm.addRetailer.AddRetailerTest@3c7f66c4]" started-at="2022-12-19T17:23:35 IST" name="openApp" finished-at="2022-12-19T17:23:40 IST" duration-ms="4305" status="PASS">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:com.scm.addRetailer.AddRetailerTest@7205765b]" started-at="2023-01-19T16:21:06 IST" name="openApp" finished-at="2023-01-19T16:21:07 IST" duration-ms="1272" status="FAIL">
+          <exception class="io.github.bonigarcia.wdm.config.WebDriverManagerException">
+            <message>
+              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1423)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1439)
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1420)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1413)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:419)
+at com.scm.genericUtilities.WebDriverUtility.launch(WebDriverUtility.java:45)
+at com.scm.genericUtilities.StartClass.openApp(StartClass.java:39)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
+at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1577)
+at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getDriverUrls(ChromeDriverManager.java:103)
+at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1444)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1279)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1198)
+... 32 more
+Caused by: java.net.UnknownHostException: chromedriver.storage.googleapis.com
+at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:948)
+at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1638)
+at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1504)
+at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
+at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
+at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:89)
+at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:158)
+at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1562)
+... 36 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.github.bonigarcia.wdm.config.WebDriverManagerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method signature="createNewRetailer()[pri:0, instance:com.scm.addRetailer.AddRetailerTest@3c7f66c4]" started-at="2022-12-19T17:23:40 IST" name="createNewRetailer" finished-at="2022-12-19T17:23:43 IST" duration-ms="3254" status="PASS">
+        <test-method signature="createNewRetailer()[pri:0, instance:com.scm.addRetailer.AddRetailerTest@7205765b]" started-at="2023-01-19T16:21:07 IST" name="createNewRetailer" finished-at="2023-01-19T16:21:07 IST" duration-ms="0" status="SKIP">
+          <exception class="io.github.bonigarcia.wdm.config.WebDriverManagerException">
+            <message>
+              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1423)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1439)
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1420)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1413)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:419)
+at com.scm.genericUtilities.WebDriverUtility.launch(WebDriverUtility.java:45)
+at com.scm.genericUtilities.StartClass.openApp(StartClass.java:39)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
+at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1577)
+at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getDriverUrls(ChromeDriverManager.java:103)
+at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1444)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1279)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1198)
+... 32 more
+Caused by: java.net.UnknownHostException: chromedriver.storage.googleapis.com
+at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:948)
+at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1638)
+at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1504)
+at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
+at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
+at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:89)
+at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:158)
+at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1562)
+... 36 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.github.bonigarcia.wdm.config.WebDriverManagerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewRetailer -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.scm.addRetailer.AddRetailerTest@3c7f66c4]" started-at="2022-12-19T17:23:43 IST" name="closeApp" finished-at="2022-12-19T17:23:43 IST" duration-ms="49" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.scm.addRetailer.AddRetailerTest@7205765b]" started-at="2023-01-19T16:21:07 IST" name="closeApp" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1674125467825" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- com.scm.addRetailer.AddRetailerTest -->
-      <class name="com.scm.products.AddProductUsingStartClassTest">
-        <test-method is-config="true" signature="openApp()[pri:0, instance:com.scm.products.AddProductUsingStartClassTest@2ea41516]" started-at="2022-12-19T17:23:35 IST" name="openApp" finished-at="2022-12-19T17:23:40 IST" duration-ms="4337" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="addProduct()[pri:0, instance:com.scm.products.AddProductUsingStartClassTest@2ea41516]" started-at="2022-12-19T17:23:40 IST" name="addProduct" finished-at="2022-12-19T17:23:46 IST" duration-ms="6114" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addProduct -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.scm.products.AddProductUsingStartClassTest@2ea41516]" started-at="2022-12-19T17:23:46 IST" name="closeApp" finished-at="2022-12-19T17:24:02 IST" duration-ms="16173" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-      </class> <!-- com.scm.products.AddProductUsingStartClassTest -->
-      <class name="com.scm.orders.Orders_sortingIdUsingStartClassTest">
-        <test-method is-config="true" signature="openApp()[pri:0, instance:com.scm.orders.Orders_sortingIdUsingStartClassTest@3ee37e5a]" started-at="2022-12-19T17:23:35 IST" name="openApp" finished-at="2022-12-19T17:23:40 IST" duration-ms="4347" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="orderSort()[pri:0, instance:com.scm.orders.Orders_sortingIdUsingStartClassTest@3ee37e5a]" started-at="2022-12-19T17:23:40 IST" name="orderSort" finished-at="2022-12-19T17:23:41 IST" duration-ms="997" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- orderSort -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:com.scm.orders.Orders_sortingIdUsingStartClassTest@3ee37e5a]" started-at="2022-12-19T17:23:41 IST" name="closeApp" finished-at="2022-12-19T17:23:41 IST" duration-ms="104" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-      </class> <!-- com.scm.orders.Orders_sortingIdUsingStartClassTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

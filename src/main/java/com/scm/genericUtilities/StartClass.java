@@ -38,7 +38,7 @@ public class StartClass {
 
 		driver = wdu.launch(browser, url, timeout);
 		
-		ThreadSafe.setWebdriverutility(wdu);
+		ThreadSafe.setwebdriverutil(wdu);
 		//sdriver = driver;
 		loginPage = new LoginPage(driver);
 		loginPage.getUsername(usersname);

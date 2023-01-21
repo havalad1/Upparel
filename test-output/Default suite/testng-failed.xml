@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.scm.orders.Orders_sortingIdUsingStartClassTest">
+      <class name="com.scm.addRetailer.AddRetailerTest">
         <methods>
           <include name="closeApp"/>
-          <include name="orderSort"/>
+          <include name="createNewRetailer"/>
           <include name="openApp"/>
         </methods>
-      </class> <!-- com.scm.orders.Orders_sortingIdUsingStartClassTest -->
+      </class> <!-- com.scm.addRetailer.AddRetailerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

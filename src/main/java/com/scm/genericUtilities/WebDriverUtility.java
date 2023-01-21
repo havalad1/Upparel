@@ -90,18 +90,19 @@ public class WebDriverUtility
 	/**
 	 * this method used to take screenshot and return path of screenshot
 	 * @param testCaseName
+	 * @return 
 	 */
-	public void takescreenshot(String testCaseName)
+	public String takescreenshot(String testCaseName)
 	{
 		String fileName=testCaseName+"_"+new JavaUtility().getDateTime();
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File src=ts.getScreenshotAs(OutputType.FILE);
-		File dst=new File("./photo/"+fileName+".png");
+		File dst=new File("./photo/"+fileName+".jpeg");
 		try {
 			Files.copy(src, dst);
 		} catch (IOException e) {
 		}
-		//return dst.getAbsolutePath();
+		return dst.getAbsolutePath();
 	}
 	
 	/**

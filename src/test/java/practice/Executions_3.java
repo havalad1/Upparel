@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -20,6 +21,7 @@ public class Executions_3
 		System.out.println("this is tc");
 		System.out.println(Thread.currentThread().getId());
 		System.out.println(Thread.currentThread().getName());
+		Assert.fail();
 		driver.quit();
 	}
 
