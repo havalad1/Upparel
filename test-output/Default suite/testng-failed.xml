@@ -3,11 +3,25 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="practice.Demo">
+=======
+      <class name="com.scm.addRetailer.AddRetailerTest">
+>>>>>>> branch 'master' of https://github.com/havalad1/Upparel.git
         <methods>
+<<<<<<< HEAD
           <include name="main"/>
+=======
+          <include name="closeApp"/>
+          <include name="createNewRetailer"/>
+          <include name="openApp"/>
+>>>>>>> branch 'master' of https://github.com/havalad1/Upparel.git
         </methods>
+<<<<<<< HEAD
       </class> <!-- practice.Demo -->
+=======
+      </class> <!-- com.scm.addRetailer.AddRetailerTest -->
+>>>>>>> branch 'master' of https://github.com/havalad1/Upparel.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

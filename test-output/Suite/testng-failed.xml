@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<<<<<<< HEAD
+  <test thread-count="5" parallel="classes" name="Test2(failed)">
+    <parameter name="browser" value="firefox"/>
+=======
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
+>>>>>>> branch 'master' of https://github.com/havalad1/Upparel.git
     <classes>
       <class name="practice.Executions">
         <methods>
@@ -17,5 +22,5 @@
         </methods>
       </class> <!-- practice.Executions -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->
