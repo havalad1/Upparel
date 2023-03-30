@@ -1,10 +1,14 @@
 package practice;
 
+import java.io.IOException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import javax.net.ssl.HttpsURLConnection;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,17 +18,17 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BrokenLinks {
-	public static void main(String[] args) {
+public class BrokenLinks 
+{
+	public static void main(String[] args) throws IOException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("http://www.google.com");
+		driver.get("https://www.microsoft.com/en-in/");
 		List<WebElement> allLinks = driver.findElements(By.xpath("//a"));
 		for (int i = 0; i < allLinks.size(); i++) {
 			String url = allLinks.get(i).getAttribute("href");
-
 			try {
 				URL u = new URL(url);
 				URLConnection urlConnection = u.openConnection();
@@ -37,6 +41,6 @@ public class BrokenLinks {
 				System.out.println("something wrong with this url =======>" + url);
 			}
 		}
-		driver.quit();
+		driver.quit();	
 	}
 }

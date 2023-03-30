@@ -16,6 +16,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -31,6 +32,23 @@ public class WebDriverUtility
 	WebDriver driver;
 	Actions a;
 	Select s;
+	
+	 /**
+	 * used to wait for element to be clickable in GUI , & check for specific element for every 500
+	milli seconds
+	 * @param driver
+	 * @param element
+	 * @param pollingTime in the form second
+	* @throws Throwable
+	 */
+	public void waitForElementWithCumtomTimeOut(WebDriver driver, WebElement element, int
+	pollingTime) throws Throwable 
+	{
+	FluentWait wait = new FluentWait(driver);
+	wait.pollingEvery(pollingTime, TimeUnit.SECONDS);
+	wait.wait(20);
+	wait.until(ExpectedConditions.elementToBeClickable(element));
+	} 
 	
 	/**
 	 * this method used to launch browser and application
@@ -71,16 +89,22 @@ public class WebDriverUtility
 		wdw.until(ExpectedConditions.visibilityOf(ele));
 	}
 	
+	/**
+	 * 
+	 * @param element
+	 */
 	public void customWait(WebElement element) {
 		int count = 0;
 		while (count < 20) {
 			try {
 				element.click();
 				break;
-			} catch (Exception e) {
+			} 
+			catch (Exception e) {
 				try {
 					Thread.sleep(1000);
-				} catch (InterruptedException e1) {
+				} 
+				catch (InterruptedException e1) {
 				}
 				count++;
 			}
